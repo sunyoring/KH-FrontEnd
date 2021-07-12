@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표연습문제</title>
+
+
+    <style>
+        #button{
+            background-color: skyblue;
+            color: white;
+      
+        }
+        #thead{
+            background-color: pink;
+            color: white;
+        }
+        tbody{
+            background-color: yellow;
+            text-align: center;
+
+        }
+    div{
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+
+        <table border="1">
+        <thead id = thead>
+            <caption style="color: red;" ><b style="font-size: 20px;">KH 정보교육원</b></caption>
+            <tr>
+            <th>관</th> <th>강의장</th><th>인원수</th><th>강의명</th>
+        </tr>
+        </thead>
+           <tbody>
+            <tr>
+                <td rowspan="6">1관</td> <td rowspan="2">I강의장</td> <td rowspan="2">30명</td> <td>오전 : 유재석&nbsp;<button id="button">신청하기</button></td>
+            </tr>
+            <tr>
+                <td> 오후 : 유재석&nbsp;<button id="button">신청하기</button></td>
+            </tr>
+            <tr>
+                <td rowspan="2">G강의장</td> <td rowspan="2">23명</td> <td>오전 : 김종민&nbsp;<button id="button">신청하기</button></td>
+            </tr>
+            <tr>
+                <td>오후 : 김종민&nbsp;<button id="button">신청하기</button> </td>        
+            </tr>
+            <tr>
+                <td rowspan="2">H강의장</td> <td rowspan="2">27명</td> <td>오전 : 정재형&nbsp;<button id="button">신청하기</button></td> 
+            </tr>
+            <tr>
+                 <td>오후 : 정재형&nbsp;<button id="button">신청하기</button> </td>
+            </tr>
+           </tbody>
+          <tfoot style="text-align: center;" >
+              <td colspan="4"  style="background-color: red;" > <strong style="color: blue;">많이 신청해주세요!</strong> </td>
+          </tfoot>
+        
+    </table>
+
+</body>
+</html>
