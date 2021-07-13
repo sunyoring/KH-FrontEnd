@@ -1,0 +1,104 @@
+/*********일반구조선택자*********/
+/*형제관계 태그 중 첫번째 태그 선택*/
+#test1 p:first-child{
+    background-color: red;
+    color: white;
+}
+
+/*형제관계 태그 중에서 마지막 태그 선택*/
+#test1 p:last-child{ /*마지막 자식 태그가 p태그가 아니기 때문에 변화없음*/
+    background-color: yellow;
+    color: white;
+}
+
+/*형제관계 태그 중에서 앞으로 수열번째 태그를 선택 짝수:2n 홀수:2n-1*/
+#test1 p:nth-child(2n){
+    background-color: yellowgreen;
+    color: white;
+}
+
+/*형제관계 태그 중에서 뒤에서 수열번째 태그 선택*/
+#test1 p:nth-last-child(4){
+    background-color: skyblue;
+    color: white;
+}
+
+
+/*********형태구조선택자*********/
+
+
+/*형제 관계 태그 중에서 첫번째 태그 선택*/
+
+#test2 p:first-of-type{
+    background-color: red;
+    color: white;
+}
+
+/*형제 관계 태그 중에서 마지막 태그 선택*/
+
+#test2 p:last-of-type{
+    background-color: orange;
+    color: white;
+}
+
+/*형제관계 태그 중에서 앞에서 수열번째 태그 선택/
+#test2 p:nth-of-type(2n){
+    background-color: yellowgreen;
+    color: white;
+}
+
+/*형제관계 태그 중에서 뒤에서 수열번째 태그 선택*/
+#test2 p:nth-last-of-type(3){
+    background-color: skyblue;
+    color: white;
+}
+
+
+
+/*********문자선택자*********/
+
+/*첫번째글자선택*/
+#test3 p::first-letter{
+    font-size: 2em;
+}
+
+/*첫번째 줄을 선택*/
+#test3 p::first-line{
+    background-color: cyan;
+}
+
+
+/*태그 뒤에 위치하는 공간을 선택(가상요소 선택자) : 내용삽입 (인라인 요소(글자요소))*/
+#test3 p::after{
+    content: "@@@태그뒤에 추가"; /* 가상요소를 사용하는 경우에는 내용이 존재하지 않아도 ""식으로 임의로 처리해 준다.*/
+  /* content: ""; */
+    display:block;  /*인라인요소를 블록요소로 지정해서 width와 height가 먹힌다.*/
+    width:100px;
+    height:100px;
+    background-color: slateblue;
+}
+
+#test3 p::before{  /*태그의 앞에 추가*/
+    content:"1.";
+}
+
+/*사용자가 드래그하여 선택한 글자 영역*/
+#test3 p::selection{
+    background-color: red;
+    color: white;
+}
+
+/*부정선택자*/
+#test4 p:not(:nth-child(2n-1)){ /*not을 통해 홀수가 아닌 짝수번째가 선택됨.*/
+    background-color: orange;
+}
+
+/*태그별로 자동번호 매기는 속성*/
+
+#test4 p{
+    counter-increment: rint;
+}
+
+#test4 p::before{
+    content: counter(rint) ". ";
+}
