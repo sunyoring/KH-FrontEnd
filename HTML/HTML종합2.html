@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML종합2</title>
+</head>
+<body>
+    <form></form>
+    <fieldset>
+        <legend>납품자 정보</legend>
+        
+      
+        <ol>
+            <li>
+                <label for="name">납품자명 : </label>
+
+                <input type="text" id="name" name="name" size=30px placeholder="name">
+
+            </li>
+            <br>   <br>
+            <li>
+                <label for="email">email : </label>
+
+                <input type="email" id="email" name="name" size=30px placeholder="answs@naver.com">
+            </li>
+            <br>   <br>
+            <li>
+                <label for="url">홈페이지 : </label>
+
+                <input type="url" id="url" name="name" size=30px placeholder="http://" >
+            </li>
+        </ol>
+
+   
+    </fieldset>
+
+    <br>   <br>
+
+    <fieldset>
+        <legend>납품정보</legend>
+        <ul>
+            <li>
+
+                <label for="pName">상품명 : </label>
+
+                <input type="text" id="pName" size=30px>
+
+            </li>
+
+            <br>   <br>
+            <li>
+                
+                <label for="amount">납품수량 : </label>
+
+                <input type="text" id="amount" size=30px placeholder="최소 100">
+            </li>
+            <br>   <br>
+            <li>
+                
+                <label for="range">납품등급 : </label>
+
+                <input type="range" id="grade"  min = "100" max = "200" value = "150" step = "10">
+            </li>
+            <br>   <br>
+            <li>
+                
+                <label for="textbox">기타사항 : </label>
+                <textarea id="textbox" cols="20" rows="0"></textarea>
+            </li>
+        </ul>
+    </fieldset>
+    <br>   
+   <button>send message</button>
+
+</form>
+   
+</body>
+</html>
