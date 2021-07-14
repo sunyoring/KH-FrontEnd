@@ -1,0 +1,47 @@
+#c-name{color : red}
+#c-16{color : #ff00ff}
+#c-rgb{color : rgb(0, 0, 255)}
+#c-rgba{color : rbga(252,0,0,0.5)}
+#c-hsl{color:hsl(360,50%,50%)}
+#c-hsla{color:hsl(360,50%,50%,.2)}/*마지막 a는 투명도*/
+
+
+/*텍스트에 줄표시하기*/
+#td1{text-decoration:none;}/*하이퍼링크 밑줄 없애기*/
+#td2{text-decoration:underline;}/*하이퍼링크 밑줄 없애기*/
+#td3{text-decoration:line-through;}/*하이퍼링크 밑줄 없애기*/
+#td4{text-decoration:overline;}/*하이퍼링크 밑줄 없애기*/
+
+/*텍스트 대소문자 구분*/
+#tt1{text-transform: none;}
+#tt2{text-transform: capitalize;}
+#tt3{text-transform: uppercase;}
+#tt4{text-transform: lowercase;}
+
+/*공통속성으로 사이즈와 두께 지정*/
+.shadow{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+/*각 그림자 효과*/
+#ts1{
+    color:orangered;
+    text-shadow: 5px 5px orange;
+}
+#ts2{
+    color:white;
+    text-shadow: 0px 0px 20px black;
+}
+#ts3{
+    color:white;
+    text-shadow: 10px 10px 20px yellowgreen;
+}
+
+#ts4 {
+    text-shadow: 0px 0px 4px grey
+    ,0px -5px 4px yellow
+    ,0px -10px 6px orange
+    ,0px -15px 11px orangered
+    ,0px -20px 18px red;
+}
