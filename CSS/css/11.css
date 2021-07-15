@@ -1,0 +1,97 @@
+.size-test{
+    border:2px solid red;
+
+}
+#test1{
+    width: 800px;
+    height: 200px;
+}
+#test2{
+    width: 50%;
+  /*  max-width: none; */
+   /* max-width: 400px; */
+    height: 200px;
+}
+
+.block{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    color:white;
+}
+
+.area1{background-color: red;}
+.area2{background-color: orange;}
+.area3{background-color: yellow}
+.area4{background-color: green;}
+.area5{background-color: blue;}
+
+.block-test1{
+    display: inline;
+    /*  인라인요소로 변경되면서 width 와 height 속성이 무시된다*/
+}
+
+.block-test2{
+    display: inline-block;
+    /* 내부속성 width와 height가 block처럼 작용*/
+}
+
+.block-test3{
+    display: block;
+    /* 내부속성 width와 height가 block처럼 작용*/
+}
+
+.container4{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    display:flex;
+
+
+    
+    /* 바로 아래 자손에게는 인라인 방식이 적용되지만 그 아래부터는 적용x*/
+   /* flex-direction: row;
+  /*  flex-direction: column;*/
+  flex-direction: row-reverse;
+ /*  flex-wrap: nowrap;  강제 한줄 배치*/
+  /* flex-wrap: wrap;  /*기존 크기 유지*/
+ justify-content: center; /*정렬 기준 ( 가로방향 )*/
+  align-content: flex-end; /*교차축 기준 행이 여러 개일 때 사용*/
+  align-items: center; /*교차축 기준 한 행일 때 사용 */
+
+}
+
+.container4 .block-test4{
+    
+    width: 200px;
+    height: 50px;
+
+    flex-grow:  1; /*증가 너비*/
+    flex-basis: 0; /*기본값은 auto  */
+    flex-shrink: 0; /*감소*/
+}
+
+.container4 .block-test4:nth-child(3){
+    flex-grow: 2; /*모든 속성들은 0으로 기본설정 -1을 하면 제일 앞으로*/ 
+}
+
+
+.container4 .block-test4:nth-child(2){
+    order: -1; /*모든 속성들은 0으로 기본설정 -1을 하면 제일 앞으로*/ 
+}
+
+.container4 .block-test4:nth-child(4){
+    order: -2; /*모든 속성들은 0으로 기본설정 -1을 하면 제일 앞으로*/ 
+}
+
+.container4 .block-test4:nth-child(5){
+    flex-shrink: 2; /*모든 속성들은 0으로 기본설정 -1을 하면 제일 앞으로*/ 
+}
+
+.container5{
+   /* width: 500px;*/
+    height: 800px;
+    background-attachment: orange;
+    display: inline-flex; /*인라인 요소처럼 배치*/
+}
+
