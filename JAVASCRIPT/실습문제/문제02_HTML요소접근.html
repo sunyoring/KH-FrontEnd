@@ -24,11 +24,11 @@ div {
 
 	<script>
 		function changeColor() {
-            const selectColor = document.getElementById("selectColor");
+            const selectColor = document.getElementById("selectColor").value;
             var div = document.getElementById("div1");
             let color = selectColor.value;
 
-            div.style.backgroundColor= color;
+            div.style.backgroundColor= selectColor;
 			
 		}
 	</script>
