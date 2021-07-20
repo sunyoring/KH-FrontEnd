@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test1</title>
+
+    <style>
+        label{
+            display: inline-block;
+            width: 110px;
+        }
+        fieldset{
+            margin-bottom: 1rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+
+   
+    <fieldset>
+        <legend>가입 정보</legend>
+   
+        <label for="id">아이디 :</label>
+        <input type="text" id="id" name="id" required><br>
+
+        <label for="password">비밀번호 :</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="password2">비밀번호확인 : </label>
+        <input type="password" id="password2" name="password2" required><br>
+
+        <label for="name">이름 :</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label >성별 :</label>
+        <input type="radio" name="gender" id="m" value="m">남
+        <label for="gender"></label>        
+        <input type="radio" name="gender" id="w" value="w" checked>여
+        <label for="gender"></label>
+
+
+        <br>
+        <label for="email">이메일 :</label>
+        <input type="email" id="email" name="email"><br>
+
+    </fieldset>
+    <input type="submit" value="회원가입">
+</form>
+</body>
+</html>
