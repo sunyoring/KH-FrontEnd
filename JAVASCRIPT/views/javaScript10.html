@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수2(클로저)</title>
+</head>
+<body>
+    <h3>지역변수의 스코프</h3> <!-- 스코프 : 어떤 변수에 접근할 수 있는지에 대한 영역 정의-->
+    <!--변수가 함수 바깥에 정의되어있을 때 -> 전역변수 / 안에 정의되어 있으면 지역변수이다. -->
+    <p>함수 내부에서 선언된 변수는 함수 밖에서 사용할 수 없다.</p>
+    <button onclick="test1();">실행확인</button>
+    <script>
+        function test1(){
+            var name = "유재석";
+            alert(name);
+        }
+        // alert(name); 지역변수를 호출할 수 없다.
+    </script>
+
+    <h3>클로저</h3>
+    <p>지역변수는 함수가 실행될 때 생성되고 함수가 종료될 때 사라진다.<br>
+         하지만 함수를 리턴하는 함수(클로저)를 사용하면 규칙을 위반할 수 있다.</p>
+         <button onclick="callCloser();">실행확인</button>
+         <script>
+
+            function test2(name){
+                var output = "hello " + name + "님"; //함수 안에서 함수 밖에 있는 변수를 사용할 수 없다.
+                return function(){ //내부함수에서는 외부함수의 지역변수를 접근할 수 있다.//클로저 
+                    return output;
+                }
+            }
+
+            function callCloser(){
+               /* var input = prompt();
+                var str = test2(input)(); //입력받은 값을 다른 함수에 넣어 다시 읽어온다.
+
+                alert(str);*/
+
+                alert(test2(prompt())())
+
+            }
+         </script>
+    
+</body>
+</html>

@@ -130,5 +130,50 @@
     }
 </script>
 
+<h3> 함수의 리턴 처리 </h3>
+
+<button onclick="test6()">실행확인</button> 
+<p id="p6"></p>
+<script>
+
+    
+    function test6(){ 
+
+        // alert(name11)
+        // var name11 = "Test"; //undefined : 선언은 인식하지만 값을 불러오진 못하여서 호이스팅이 되었다.
+
+        /*  let과 const는 호이스팅이 일어나지 않는다.
+        alert(name12)
+        let name12 = "Test";
+        alert(name12)
+        const name12 = "Test";
+        */
+
+        var p6 = document.getElementById("p6");
+        var value = returnFunction();
+        p6.innerHTML = value;
+
+        
+
+        /*함수선언식 : 선언부가 호출부 더 아래 있어도 사용이 가능하다(호이스팅). */
+        // function returnFunction(){
+        //     return Math.floor(Math.random()*100)+1
+
+        // }
+
+
+/*      함수표현식 : 변수에 담아서 사용하는 것 , 선언부가 호출부 더 아래 있으면 값을 가져오지 못한다.
+        var returnFunction = function(){
+            return Math.floor(Math.random()*100)+1
+        }
+
+        */
+    }
+
+        var returnFunction = function(){ // 같은 함수 내에서는 안되지만 밖으로 빼내면 전역함수처럼 되어 사용이 가능하다.
+                return Math.floor(Math.random()*100)+1
+        }
+</script>
+
 </body>
 </html>
