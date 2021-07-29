@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+<ol>
+    <li class="first"><h2>1-1</h2></li>
+    <li class="second"><h2>1-2</h2></li>
+    <li class="first"><h2>1-3</h2></li>
+</ol>   
+<ul>
+    <li class="third"><h2>2-1</h2></li>
+    <li class="second"><h2>2-2</h2></li>
+    <li class="third"><h2>2-3</h2></li>
+</ul> 
+
+<script>
+    $(function(){
+
+        $("li").css("font","1.5em")
+        $(".first").css("color","red")
+        $("ol li").eq(1).css("color","yellow")
+        $("ol li").last().css("color","green")
+
+        $(".third").css("color","blue")
+        $("ul li").eq(1).css("color","purple")
+        $("ul li").last().css("color","pink")
+
+
+
+    })
+</script>
+</body>
+</html>

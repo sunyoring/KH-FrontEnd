@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>구분</th>
+            <th>A</th> 
+            <th>B</th> 
+        
+        </tr>
+            <tr>
+                <td>가</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+
+            <tr>
+                <td>나</td>
+                <td>20</td>
+                <td>20</td>
+            </tr>
+
+            <tr>
+                <td>계</td>
+                <td>30</td>
+                <td>30</td>
+            </tr>
+    </table>
+
+    <input type="button" value="[가]색 변경" onclick="click1()">
+    <input type="button" value="[나]색 변경" onclick="click2()">
+    <input type="button" value="[A]색 변경" onclick="click3()">
+    <input type="button" value="[B]색 변경" onclick="click4()">
+
+
+    <script>
+        function clear(){
+            $("table *").removeAttr("stryle")
+        }
+
+        function click1(){
+            $("tr:eq(1) td:gt(0)").css("color","yellow")
+        }
+        function click2(){
+            $("tr:eq(2) td:gt(0)").css("color","yellow")
+
+        }
+        function click3(){
+            $("tr:eq(1) td:eq(1) , tr:eq(2) td:eq(1)").css("color","yellow")
+
+        }
+        function click4(){
+            $("tr:eq(1) td:eq(2) , tr:eq(2) td:eq(2)").css("color","yellow")
+        }
+    </script>
+</body>
+</html>
