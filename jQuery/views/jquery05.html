@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수형태의 필터선택자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>함수 형태의 필터선택자</h1>
+    <h3>:nth-child()필터선택자</h3>
+    <table border="1">
+		<tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+		<tr><td>유재석</td><td>AAA형</td><td>남양주</td></tr>
+		<tr><td>이효리</td><td>AB형</td><td>안산</td></tr>
+		<tr><td>화   사</td><td>B형</td><td>전주</td></tr>
+		<tr><td>제   시</td><td>B형</td><td>인천</td></tr>
+		<tr><td>엄정화</td><td>A형</td><td>서울</td></tr>
+		<tr><td>김종민</td><td>O형</td><td>수원</td></tr>
+		<tr><td colspan="2">총원</td><td><a>6 명</a></td></tr>
+    </table>
+
+    <script>
+        $(function(){ // = $(document).ready(frunction(){ ------  })
+            $("tr:eq(0)").css({"background":"black","color":"white"}) //tr의 인덱스 0번째 객체를 선택
+
+            //수열번째 위치하는 태그선택(인덱스가 아닌 순서를 직접 지정)
+            $("tr:nth-child(2n)").css('background','yellowgreen') //짝수번째로 지정
+            $("tr:nth-child(3n)").css('background','orange') //3의 배수번째로 지정
+
+            //n번째를 초과하는 객체선택(인덱스)
+            $("tr:gt(6)").css("background","lightgray");
+
+            //n번째 미만의 객체선택(인덱스)
+            $("tr:lt(7)").css("font-size","1.5em");
+
+            //특정 문자열을 포함하는 객체선택
+            $("tr:contains('A형')").css("color","red")//A형을 내용에 포함하고있는 객체 선택
+
+            //특정 태그를 가지고 있는 객체 선택
+            $("td:has(a)").css("color","red")//a태그를 가지고 있는 td 객체 선택
+
+            //선택자와 일치하지 않는 태그 선택
+            $("td:not(:contains('유재석'))").css("color","blue") //유재석의 내용을 포함하지 않는 객체 선택
+        })
+    </script>
+</body>
+</html>
