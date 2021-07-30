@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>method1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    제목 : <input type="text" name="title"><br>
+    내용 : <input type="text" name="content"><br>
+    작성자 : <input type="text" name="owner"><br>
+    <input type="button" value="테이블에 추가" onclick="add();">
+    <table border="1">
+        <tr>
+            <td>제목</td>
+            <td>내용</td>
+            <td>작성자</td>
+        </tr>
+    </table>
+
+    <script>
+        
+        function add(){
+
+
+            var text =[
+            $("input[name=title]").val() ,
+            $("input[name=content]").val(),
+            $("input[name=owner]").val()
+            ]
+
+            $("table").children().append("<tr>")
+
+            $("input[type=text]").each(function(index){
+                console.log(text[index])
+                $("table").children().append("<td>"+text[index]+"</td>")
+            
+            })
+            $("table").children().append("</tr>")
+
+
+        }
+
+    </script>
+</body>
+</html>
