@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순회(탐색)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>순회(탐색) 메소드</h1>
+    <h3>Ancestors 메소드</h3>
+    <p>선택된 요소의 상위 요소들을 선택할 수 있는 메소드</p>
+    <div class="wrap">
+        <div style="width:500px;">div (great-grandparent)
+            <ul>ul (grandparent)
+                <li>li (direct parent)
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+
+        <div style="width:500px;">div (grandparent)
+            <p>p (direct parent)
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            $("span").parent().css({color:"red",border:"2px solid red"}) //span태그의 바로 위 상위요소인 p를 선택
+            .parents("ul").css({color:"blue",border:"2px solid blue"}) //모든 상위요소를 선택, 특정 요소를 선택하고 싶을 때 parents("인자값")을 넣어준다.
+            
+            //선택 된 요소("div")부터 인자요소 전까지 범위의 요소를 리턴
+            $("span").parentsUntil("div").css({color:"yellowgreen",border:"2px solid yellowgreen"})
+            
+        })
+    </script>
+</body>
+</html>

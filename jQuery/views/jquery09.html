@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순회(탐색)메소드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <style>
+        .wrap * {
+            border:1px solid lightgray;
+            display: block;
+            padding: 5px;
+            margin: 15px;
+            color: gray; 
+        }
+    </style>
+
+</head>
+<body>
+    <h1>순회(탐색)메소드</h1>
+    <h3>sideways 메소드</h3>
+    <div class="wrap">div (parent)
+        <p>p</p>
+        <span>span</span>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <p>p</p>
+    </div>
+    
+    <script>
+      $(function(){
+            //같은 레벨인 형제 요소들을 선택
+            
+            $("h2").siblings().css({"color":"red","border":"2px solid red"})
+
+            $("h2").siblings("p").css({"color":"orange","border":"2px solid orange"})
+            
+
+            //형제 요소들 중 바로 다음 요소 선택
+
+            $("h2").next().css({"color":"blue","border":"2px solid blue"})      
+            
+            //선택된 요소 다음의 모든 요소들
+            $("h2").nextAll().css("font-size","2em")
+
+            //선택 요소부터 내가 넣은 인자 이전까지의 요소들을선택
+            $("h2").nextUntil("p").css("border","dasged")
+
+
+            //prev() -> 이전 요소들
+            $("h2").prev().css("background","yellow")
+
+            $("h2").prevAll().css("font-size","4em")
+
+            $("h2").prevUntil("p").css("border","dashed")
+
+
+        
+        })
+    </script>
+
+</body>
+</html>
