@@ -158,12 +158,12 @@
     
             <script>
 
-                var eBus = new Vue(); //이벤트 버스로 활용
-                Vue.component('child-component',{ //전역
-                    template:'<div>하위 컴포넌트입니다.  <button v-on:click="showLog">Show</button>  </div>',
+                var eBus = new Vue();  //1. 새로운 인스턴스 생성 -> 이벤트 버스로 사용
+                Vue.component('child-component',{ //2. 하위 컴포넌트에 template과 methods 속성 추가
+                    template:'<div>하위 컴포넌트입니다.  <button v-on:click="showLog">Show</button>  </div>', // 버튼클릭시 showLog이벤트 발생
                     methods:{
                         showLog:function(){
-                            eBus.$emit('triggerEventBus',100) 
+                            eBus.$emit('triggerEventBus',100) //4. 이벤트 버스 변수.$emit 을 선언하여 이벤트 발생 로직 추가
                         }
                     }
                 })
@@ -172,7 +172,7 @@
                 var app = new Vue({
                     el:"#app5",
                     created:function(){
-                        eBus.$on('triggerEventBus',function(value){
+                        eBus.$on('triggerEventBus',function(value){ //5. 이벤트 버스 변수.$on으로 이벤트를 전달받아 출력 
                             console.log("이벤트를 전달받음, 전달받은 값" + value)
                         })
                     }
