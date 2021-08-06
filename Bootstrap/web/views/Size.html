@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	       <!-- Latest compiled and minified CSS -->
+		   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		   <!-- jQuery library -->
+		   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		   <!-- Latest compiled JavaScript -->
+		   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>가변크기 활용하기</title>
+	<style>
+		div div {
+			border:1px solid black;
+			padding:0px;
+		}
+		img {
+			width:100%;
+			height:150px;
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">가변크기 활용하기</h1>
+	
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-5"><img src="../../resource/image/flower1.PNG" class="img-responsive"></div>
+		<div class="col-lg-5"><img src="../../resource/image/flower3.PNG" class="img-responsive"></div>
+		<div class="col-lg-1"></div>
+	</div>
+
+	<!-- 부트스트랩4 기준 정리 -->
+
+<!-- 그리드 시스템 : 컨텐츠를 보관할 행과 열(표)을 통해 페이지 레이아웃을 만드는데 사용 -->
+	<!-- 그리드 옵션 
+	 1. 매우 작은 기기 모바일폰 	.col- (초소형 기기 - 화면 너비가 576px 미만) 
+		- 항상 적용 (부트스트랩 3버전은 .col-xs ) 
+
+	 2. 작은 기기 태블릿 .col-sm- (소형 기기 - 화면 너비가 576px 이상)
+		- 분기점576px보다 크면 적용
+	 3. 중간 기기 데스크탑.col-md- (중형 기기 - 화면 너비가 768px 이상)
+	 	- 분기점768px보다 크면 적용
+
+	 4. 대형 기기 .col-lg- (대형 기기 - 화면 너비가 992px 이상)
+ 		- 분기점992px보다 크면 적용
+
+	5.  초대형 기기 .col-xl- (xlarge 장치 - 화면 너비가 1200px 이상)  //부트스트랩4 에서 추가됨.
+	 		- 분기점보다 크면 적용
+	** 각 클래스마다 12개의 컬럼이 존재하며 합계가 12개 이내에서 컬럼 개수를 지정하여 공간을 할당할 수 있으며
+		지정하지 않을 시 자동으로 1/n 씩 할당된다. 
+
+		**Max container width: 실제 컨텐츠가 담기는 최고 너비
+
+	-->
+	
+</body>
+</html>
